@@ -1,0 +1,74 @@
+/* Paleta de colores */
+:root {
+    --color-primario: #ffffff;
+    --color-secundario: #e20613;
+    --color-terciario: #550404;
+    --color-texto-general: #F2F2F2;
+}
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-texto-general);
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: var(--color-secundario);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--color-texto-general) !important;
+}
+
+.jumbotron {
+    background-color: var(--color-terciario);
+    padding: 2rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.jumbotron h1 {
+    color: var(--color-texto-general);
+}
+
+footer {
+    background-color: var(--color-secundario);
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    color: var(--color-texto-general);
+}
+
+.card {
+    background-color: var(--color-terciario);
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.card-title, .card-text {
+    color: var(--color-texto-general);
+}
+
+.btn-primary {
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+}
+
+.list-group-item {
+    background-color: var(--color-terciario);
+    border: none;
+    color: var(--color-texto-general);
+}
+
+.list-group-item-action:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-texto-general);
+}
+
+/* Estilo para el logo en la navbar */
+.logo-img {
+    height: 40px; /* Ajusta el tamaño según tus necesidades */
+    margin-right: 10px;
+    vertical-align: middle;
+}
