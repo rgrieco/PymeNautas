@@ -30,9 +30,12 @@ body {
     color: var(--color-texto-general);
 }
 
+/* Sticky footer style */
 footer {
-    background-color: var(--color-secundario);
-    padding: 20px 0;
+    background-color: var(--color-secundario); /* Background color for the footer */
+    color: #F2F2F2; /* Text color for the footer */
+    padding: 10px 0;
+    text-align: center;
 }
 
 footer p {
@@ -71,4 +74,36 @@ footer p {
     height: 40px; /* Ajusta el tamaño según tus necesidades */
     margin-right: 10px;
     vertical-align: middle;
+}
+
+/* HTML, body and #wrap styles for sticky footer */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#wrap {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content area (pushing footer to the bottom) */
+#main {
+    flex: 1;
+}
+/* Redes sociales en el footer */
+.footer-social-icons {
+    margin-top: 10px;
+}
+
+.footer-social-icons a {
+    color: #F2F2F2; /* Color de los iconos */
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-social-icons a:hover {
+    color: #D9756C; /* Color al pasar el mouse */
 }
