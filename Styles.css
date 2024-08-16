@@ -95,11 +95,13 @@ html, body {
 }
 
 #pmain{
-color: #F2F2F2;
+color: var(--color-terciario);
+text-align: justify;
 }
 
 #mainBackground{
-    background-color: var(--color-terciario);
+   /* background-color: var(--color-terciario);*/
+   background-color: white;
 }
 
 /* Redes sociales en el footer */
