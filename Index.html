@@ -1,107 +1,178 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PymeNautas - Tu guía en la galaxia empresarial</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="Img/Logo-02.ico">
+    <link rel="icon" type="image/x-icon" href="Img/Logo-02.ico" />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Tu archivo CSS personalizado -->
-    <link href="styles.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" />
     <!-- Font Awesome para íconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <div id="wrap">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="Img/Logo-02.svg" alt="Logo de PymeNautas" class="logo-img">
-                    PymeNautas
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Episodios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Main content -->
-        <div id="main" class="container mt-4">
-            <div class="jumbotron text-center">
-                <h1 class="display-4">Bienvenido a PymeNautas</h1>
-                <p class="lead">Tu guía en la galaxia empresarial.</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Escucha ahora</a>
-            </div>
-
-            <!-- Sección de Episodios -->
-            <div class="row mt-5">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Episodio 1</h5>
-                            <p class="card-text">Exploramos las bases del emprendimiento en el espacio empresarial.</p>
-                            <a href="#" class="btn btn-primary">Escuchar</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Episodio 2</h5>
-                            <p class="card-text">Cómo construir tu marca desde cero.</p>
-                            <a href="#" class="btn btn-primary">Escuchar</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Episodio 3</h5>
-                            <p class="card-text">Innovación y tecnología para pequeñas empresas.</p>
-                            <a href="#" class="btn btn-primary">Escuchar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="Img/Logo-02.svg"
+              alt="Logo de PymeNautas"
+              class="logo-img"
+            />
+            PymeNautas
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Sobrenosotros.html">Sobre Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Episodios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
 
-        <!-- Footer -->
-        <!-- Footer -->
-<footer>
-    <div class="container">
-        
-        <!-- Redes sociales -->
-        <div class="footer-social-icons">
-            <a href="https://www.instagram.com/pymenautas" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@Pymenautas" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.spotify.com" target="_blank"><i class="fab fa-spotify"></i></a>
+      <main id="mainBackground" class="container-fluid py-5 text-light">
+        <div class="container">
+          <h1 id="pmain" class="display-4">Bienvenido a PymeNautas</h1>
+          <p id="pmain" class="lead">Tu guía en la galaxia empresarial.</p>
+
+          <p id="pmain">
+            En un universo repleto de oportunidades y desafíos, en
+            <strong>PymeNautas</strong> nos presentamos como tu compañero de
+            viaje. Nuestro objetivo es acompañarte y ayudarte en cada paso de tu
+            travesía empresarial, proporcionándote las herramientas, consejos e
+            inspiración que necesitas para navegar con éxito por la galaxia del
+            emprendimiento.
+          </p>
+          <p id="pmain">
+            En <strong>PymeNautas</strong>, entendemos que iniciar y hacer
+            crecer una pequeña o mediana empresa es una misión compleja, llena
+            de obstáculos, y retos que dia a dia se te presentan. Por eso, hemos
+            creado este espacio, donde podrás explorar recursos valiosos,
+            escuchar historias reales de otros emprendedores y descubrir
+            estrategias que te ayudarán a alcanzar nuevas estrellas en tu camino
+            empresarial.
+          </p>
+          <p id="pmain">
+            Nuestro eslogan, <em>"tu guía en la galaxia empresarial"</em>,
+            encapsula nuestra misión: ser la luz que te guía entre las infinitas
+            posibilidades del universo de los negocios, ayudándote a tomar
+            decisiones informadas y a encontrar tu propio camino hacia el éxito.
+          </p>
+          <p id="pmain">
+            Únete a nosotros en este viaje y juntos conquistaremos nuevos
+            horizontes en el emocionante mundo del emprendimiento. ¡Explora,
+            aprende y crece con <strong>PymeNautas</strong>!
+          </p>
+          <p id="pmain">
+            <strong>¡Espero que disfrutes del viaje!</strong>
+          </p>
         </div>
-        <b></b>
-        <p>&copy; 2024 PymeNautas. Todos los derechos reservados.</p>
-    </div>
-</footer>
+      </main>
+
+      <!-- Main content -->
+
+      <div id="main" class="container mt-4">
+        <div class="jumbotron text-center">
+          <h1 class="display-4">Bienvenido a PymeNautas</h1>
+          <p class="lead">Tu guía en la galaxia empresarial.</p>
+          <a class="btn btn-primary btn-lg" href="#" role="button"
+            >Escucha ahora</a
+          >
+        </div>
+        <!-- Main content 2 -->
+
+        <!-- Sección de Episodios -->
+        <div class="row mt-5">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Episodio 1</h5>
+                <p class="card-text">
+                  Exploramos las bases del emprendimiento en el espacio
+                  empresarial.
+                </p>
+                <a href="#" class="btn btn-primary">Escuchar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Episodio 2</h5>
+                <p class="card-text">Cómo construir tu marca desde cero.</p>
+                <a href="#" class="btn btn-primary">Escuchar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Episodio 3</h5>
+                <p class="card-text">
+                  Innovación y tecnología para pequeñas empresas.
+                </p>
+                <a href="#" class="btn btn-primary">Escuchar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <!-- Redes sociales -->
+          <div class="footer-social-icons">
+            <a href="https://www.instagram.com/pymenautas" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.youtube.com/@Pymenautas" target="_blank"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="https://www.spotify.com" target="_blank"
+              ><i class="fab fa-spotify"></i
+            ></a>
+          </div>
+          <b></b>
+          <p>&copy; 2024 PymeNautas. Todos los derechos reservados.</p>
+        </div>
+      </footer>
     </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
