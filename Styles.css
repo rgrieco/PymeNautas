@@ -149,8 +149,8 @@ body {
 }
 
 .block-1 {
-    background-color: #f8f9fa;
-    border-right: 2px solid #dee2e6;
+    background-color: #D9756C;
+    border-right: 2px solid #D9756C;
     /* Línea separadora entre bloques */
 }
 
@@ -170,3 +170,9 @@ h2,
 p {
     margin: 0;
 }
+
+#mail{
+    Color:black;
+}
+#portada{
+    width: 50%;   }
