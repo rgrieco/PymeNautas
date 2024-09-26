@@ -6,6 +6,18 @@
     --color-texto-general: #F2F2F2;
 }
 
+// <uniquifier>: Use a unique and descriptive class name
+
+.league-gothic-<uniquifier> {
+    font-family: "League Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+
 body {
     background-color: var(--color-primario);
     color: var(--color-texto-general);
@@ -150,12 +162,12 @@ body {
 
 .block-1 {
     background-color: #D9756C;
-    border-right: 2px solid #D9756C;
+    
     /* Línea separadora entre bloques */
 }
 
 .block-2 {
-    background-color: #6f8ab7;
+    background-color: white;
 }
 
 .block-full-width {
@@ -173,6 +185,8 @@ p {
 
 #mail{
     Color:black;
+    font: league-gothic;
+    font-size: 1.2rem;
 }
 #portada{
-    width: 50%;   }
+    width: 100%;   }
