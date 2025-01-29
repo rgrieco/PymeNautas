@@ -6,22 +6,14 @@
     --color-texto-general: #F2F2F2;
 }
 
-// <uniquifier>: Use a unique and descriptive class name
-
-.league-gothic-<uniquifier> {
-    font-family: "League Gothic", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-}
 
 
 body {
     background-color: var(--color-primario);
     color: var(--color-texto-general);
-    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 
 .navbar {
@@ -50,10 +42,7 @@ footer {
     text-align: center;
 }
 
-footer p {
-    margin: 0;
-    color: var(--color-texto-general);
-}
+
 
 .card {
     background-color: var(--color-terciario);
@@ -101,10 +90,46 @@ html, body {
 }
 
 /* Main content area (pushing footer to the bottom) */
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .overlay-text h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .overlay-text p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+
 #main {
     flex: 1;
     width: 100%;
 }
+
+.main-image {
+    position: relative;
+    height: 100%; /* Ocupa toda la altura de la pantalla */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    overflow: hidden;
+  }
+  
+  .main-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /*Ajusta la imagen sin deformarla */
+  }
+  
 
 #pmain{
 color: var(--color-terciario);
@@ -132,13 +157,6 @@ text-align: justify;
     color: #D9756C; /* Color al pasar el mouse */
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
 
 #wrap {
     flex-grow: 1;
@@ -167,7 +185,8 @@ body {
 }
 
 .block-2 {
-    background-color: white;
+    display: flex;
+    align-content: center;
 }
 
 .block-full-width {
@@ -184,9 +203,25 @@ p {
 }
 
 #mail{
-    Color:black;
+    Color:white;
     font: league-gothic;
     font-size: 1.2rem;
 }
 #portada{
     width: 100%;   }
+
+    /* footer*/
+footer p {
+    margin: 0;
+    color: var(--color-texto-general);
+    height: 120px;
+}
+    /* footer */
+
+    .correo {
+        display: inline-block;
+        float: right; /* Alinea el bloque a la derecha */
+        max-width: 400px; /* Opcional: ajusta el ancho según sea necesario */
+        text-align: right; /* Alinea el texto dentro del bloque */
+        margin: 20px; /* Opcional: agrega espacio alrededor del bloque */
+      }
