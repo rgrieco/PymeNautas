@@ -186,3 +186,17 @@
   p {
     margin: 0;
   }
+
+  
+  #footerresourses {
+font-size: small;
+text-decoration: underline;
+
+
+  }
+  
+.list-unstyled{ 
+
+    font-size: small;
+
+  }
