@@ -4,189 +4,196 @@
     --color-secundario: #e20613;
     --color-terciario: #550404;
     --color-texto-general: #F2F2F2;
-}
-
-// <uniquifier>: Use a unique and descriptive class name
-
-.league-gothic-<uniquifier> {
-    font-family: "League Gothic", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-}
-
-
-body {
+  }
+  
+  body {
     background-color: var(--color-primario);
     color: var(--color-texto-general);
-    font-family: Arial, sans-serif;
-}
-
-.navbar {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  .navbar {
     background-color: var(--color-secundario);
-}
-
-.navbar-brand, .nav-link {
+  }
+  
+  .navbar-brand,
+  .nav-link {
     color: var(--color-texto-general) !important;
-}
-
-.jumbotron {
+  }
+  
+  .jumbotron {
     background-color: var(--color-terciario);
     padding: 2rem 1rem;
     border-radius: 0.5rem;
-}
-
-.jumbotron h1 {
+  }
+  
+  .jumbotron h1 {
     color: var(--color-texto-general);
-}
-
-/* Sticky footer style */
-footer {
-    background-color: var(--color-secundario); /* Background color for the footer */
-    color: #F2F2F2; /* Text color for the footer */
-    padding: 10px 0;
+  }
+  
+  /* Footer General */
+  footer {
+    background-color: var(--color-secundario);
+    color: #F2F2F2;
+    padding: 20px 0;
     text-align: center;
-}
-
-footer p {
-    margin: 0;
+  }
+  
+  /* Estilos para columnas del footer */
+  .footer-column h5 {
     color: var(--color-texto-general);
-}
-
-.card {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column a {
+    color: var(--color-texto-general);
+    text-decoration: none;
+  }
+  
+  .footer-column a:hover {
+    color: #D9756C;
+  }
+  
+  .footer-social-vertical li {
+    margin-bottom: 10px;
+  }
+  
+  /* Separador y margen para la declaración de derechos */
+  .footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+  }
+  
+  /* Otros estilos */
+  .card {
     background-color: var(--color-terciario);
     border: none;
     border-radius: 0.5rem;
-}
-
-.card-title, .card-text {
+  }
+  
+  .card-title,
+  .card-text {
     color: var(--color-texto-general);
-}
-
-.btn-primary {
+  }
+  
+  .btn-primary {
     background-color: var(--color-secundario);
     border-color: var(--color-secundario);
-}
-
-.list-group-item {
+  }
+  
+  .list-group-item {
     background-color: var(--color-terciario);
     border: none;
     color: var(--color-texto-general);
-}
-
-.list-group-item-action:hover {
+  }
+  
+  .list-group-item-action:hover {
     background-color: var(--color-secundario);
     color: var(--color-texto-general);
-}
-
-/* Estilo para el logo en la navbar */
-.logo-img {
-    height: 40px; /* Ajusta el tamaño según tus necesidades */
+  }
+  
+  /* Estilo para el logo en la navbar */
+  .logo-img {
+    height: 40px;
     margin-right: 10px;
     vertical-align: middle;
-}
-
-/* HTML, body and #wrap styles for sticky footer */
-html, body {
+  }
+  
+  /* HTML, body y #wrap para sticky footer */
+  html,
+  body {
     height: 100%;
     margin: 0;
-}
-
-#wrap {
+  }
+  
+  #wrap {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-}
-
-/* Main content area (pushing footer to the bottom) */
-#main {
+  }
+  
+  /* Área principal de contenido */
+  #main {
     flex: 1;
     width: 100%;
-}
-
-#pmain{
-color: var(--color-terciario);
-text-align: justify;
-}
-
-#mainBackground{
-   /* background-color: var(--color-terciario);*/
-   background-color: white;
-}
-
-/* Redes sociales en el footer */
-.footer-social-icons {
-    margin-top: 10px;
-}
-
-.footer-social-icons a {
-    color: #F2F2F2; /* Color de los iconos */
-    margin: 0 10px;
-    font-size: 24px;
-    text-decoration: none;
-}
-
-.footer-social-icons a:hover {
-    color: #D9756C; /* Color al pasar el mouse */
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-#wrap {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.row-content {
+  }
+  
+  .main-image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .main-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Formulario de Suscripción */
+  .subscription-form {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  #mail {
+    color: white;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 1.2rem;
+  }
+  
+  #portada {
+    width: 100%;
+  }
+  
+  /* Otros estilos opcionales */
+  .row-content {
     display: flex;
     flex-grow: 1;
-}
-
-.block {
+  }
+  
+  .block {
     flex-basis: 50%;
-    /* Cada bloque ocupa el 50% del ancho */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
+  }
+  
 
-.block-1 {
-  /*  background-color: #D9756C;
-    
-    /* Línea separadora entre bloques */
-}
-
-.block-2 {
-    background-color: white;
-}
-
-.block-full-width {
+  .block-2 {
+    display: flex;
+    align-content: center;
+  }
+  
+  .block-full-width {
     background-color: #343a40;
     color: white;
     width: 100%;
     padding: 40px 0;
     text-align: center;
-}
-
-h2,
-p {
+  }
+  
+  h2,
+  p {
     margin: 0;
-}
+  }
 
-#mail{
-    Color:black;
-    font: league-gothic;
-    font-size: 1.2rem;
-}
-#portada{
-    width: 100%;   }
+  
+  #footerresourses {
+font-size: small;
+text-decoration: underline;
+
+
+  }
+  
+.list-unstyled{ 
+
+    font-size: small;
+
+  }
