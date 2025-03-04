@@ -33,14 +33,41 @@
     color: var(--color-texto-general);
   }
   
-  /* Sticky footer style */
+  /* Footer General */
   footer {
     background-color: var(--color-secundario);
     color: #F2F2F2;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
   }
   
+  /* Estilos para columnas del footer */
+  .footer-column h5 {
+    color: var(--color-texto-general);
+    margin-bottom: 10px;
+  }
+  
+  .footer-column a {
+    color: var(--color-texto-general);
+    text-decoration: none;
+  }
+  
+  .footer-column a:hover {
+    color: #D9756C;
+  }
+  
+  .footer-social-vertical li {
+    margin-bottom: 10px;
+  }
+  
+  /* Separador y margen para la declaración de derechos */
+  .footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+  }
+  
+  /* Otros estilos */
   .card {
     background-color: var(--color-terciario);
     border: none;
@@ -75,7 +102,7 @@
     vertical-align: middle;
   }
   
-  /* HTML, body and #wrap styles for sticky footer */
+  /* HTML, body y #wrap para sticky footer */
   html,
   body {
     height: 100%;
@@ -88,7 +115,7 @@
     flex-direction: column;
   }
   
-  /* Main content area */
+  /* Área principal de contenido */
   #main {
     flex: 1;
     width: 100%;
@@ -107,7 +134,7 @@
     object-fit: cover;
   }
   
-  /* Estilos para el formulario de suscripción */
+  /* Formulario de Suscripción */
   .subscription-form {
     max-width: 600px;
     margin: 20px auto;
@@ -124,30 +151,7 @@
     width: 100%;
   }
   
-  /* Redes sociales en el footer */
-  .footer-social-icons {
-    margin-top: 10px;
-  }
-  
-  .footer-social-icons a {
-    color: #F2F2F2;
-    margin: 0 10px;
-    font-size: 24px;
-    text-decoration: none;
-  }
-  
-  .footer-social-icons a:hover {
-    color: #D9756C;
-  }
-  
-  /* Footer */
-  footer p {
-    margin: 0;
-    color: var(--color-texto-general);
-    height: 120px;
-  }
-  
-  /* Otros estilos de bloques y secciones (según sea necesario) */
+  /* Otros estilos opcionales */
   .row-content {
     display: flex;
     flex-grow: 1;
