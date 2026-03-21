@@ -1,199 +1,708 @@
-/* Paleta de colores */
+/* =============================================
+   VARIABLES
+   ============================================= */
 :root {
-    --color-primario: #ffffff;
-    --color-secundario: #e20613;
-    --color-terciario: #550404;
-    --color-texto-general: #F2F2F2;
+  --color-rojo: #e20613;
+  --color-rojo-oscuro: #550404;
+  --color-espacio: #0a0a1a;
+  --color-espacio-medio: #12122a;
+  --color-texto: #F2F2F2;
+  --color-acento: #D9756C;
+  --color-blanco: #ffffff;
+}
+
+/* =============================================
+   RESET & BASE
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-espacio);
+  color: var(--color-texto);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+#wrap {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'League Gothic', sans-serif;
+  letter-spacing: 1px;
+}
+
+p {
+  margin: 0;
+}
+
+/* =============================================
+   NAVBAR
+   ============================================= */
+.navbar {
+  background-color: var(--color-rojo);
+  box-shadow: 0 2px 24px rgba(226, 6, 19, 0.4);
+  padding: 10px 0;
+}
+
+.navbar-brand {
+  color: var(--color-texto) !important;
+  font-family: 'League Gothic', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: rgba(242, 242, 242, 0.85) !important;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 8px 16px !important;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--color-blanco) !important;
+}
+
+.nav-link-cta {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  margin-left: 8px;
+}
+
+.nav-link-cta:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.logo-img {
+  height: 38px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* =============================================
+   HERO SECTION
+   ============================================= */
+#hero {
+  background: linear-gradient(135deg, var(--color-espacio) 0%, #150505 50%, var(--color-rojo-oscuro) 100%);
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+.hero-stars {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    radial-gradient(1px 1px at 8% 12%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 22% 45%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 38% 8%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 52% 68%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 68% 22%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 78% 52%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 92% 78%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 14% 78%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 58% 88%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 33% 58%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 45% 32%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 15%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 5% 55%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 72% 88%, rgba(255,255,255,0.3) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.hero-tag {
+  background: rgba(226, 6, 19, 0.15);
+  border: 1px solid rgba(226, 6, 19, 0.5);
+  color: #ff6b6b;
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.hero-title {
+  font-family: 'League Gothic', sans-serif;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  color: var(--color-blanco);
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+.text-highlight {
+  color: var(--color-rojo);
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: rgba(242, 242, 242, 0.65);
+  max-width: 480px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-hero-primary {
+  background-color: var(--color-rojo);
+  color: var(--color-blanco);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid var(--color-rojo);
+  font-size: 0.95rem;
+}
+
+.btn-hero-primary:hover {
+  background-color: transparent;
+  color: var(--color-rojo);
+}
+
+.btn-hero-secondary {
+  background-color: transparent;
+  color: var(--color-texto);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(242, 242, 242, 0.25);
+  font-size: 0.95rem;
+}
+
+.btn-hero-secondary:hover {
+  border-color: rgba(242, 242, 242, 0.7);
+  color: var(--color-blanco);
+}
+
+.hero-logo-col {
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo-img {
+  width: 100%;
+  max-width: 420px;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 50px rgba(226, 6, 19, 0.35));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-22px); }
+}
+
+/* =============================================
+   PLATAFORMAS
+   ============================================= */
+#plataformas {
+  background-color: var(--color-espacio-medio);
+  padding: 36px 0;
+  border-top: 1px solid rgba(226, 6, 19, 0.15);
+  border-bottom: 1px solid rgba(226, 6, 19, 0.15);
+}
+
+.plataformas-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: rgba(242, 242, 242, 0.4);
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.plataformas-badges {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.badge-plataforma {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.badge-spotify { background: #1DB954; color: #000; }
+.badge-spotify:hover { background: #1aa34a; color: #000; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(29,185,84,0.4); }
+
+.badge-youtube { background: #FF0000; color: #fff; }
+.badge-youtube:hover { background: #cc0000; color: #fff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(255,0,0,0.4); }
+
+.badge-apple { background: #9B59B6; color: #fff; }
+.badge-apple:hover { background: #7d3f9e; color: #fff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(155,89,182,0.4); }
+
+/* =============================================
+   SECTION UTILS
+   ============================================= */
+.section-header {
+  margin-bottom: 48px;
+}
+
+.section-tag {
+  background: var(--color-rojo);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 5px 12px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-family: 'League Gothic', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--color-blanco);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.section-subtitle {
+  color: rgba(242, 242, 242, 0.5);
+  margin-top: 12px;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+/* =============================================
+   ULTIMO EPISODIO
+   ============================================= */
+#ultimo-episodio {
+  padding: 90px 0;
+  background: var(--color-espacio);
+}
+
+.episodio-destacado {
+  background: var(--color-espacio-medio);
+  border: 1px solid rgba(226, 6, 19, 0.3);
+  border-radius: 20px;
+  padding: 44px;
+}
+
+.episodio-numero {
+  color: var(--color-rojo);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.episodio-titulo {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 2rem;
+  color: var(--color-blanco);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.episodio-descripcion {
+  color: rgba(242, 242, 242, 0.65);
+  line-height: 1.7;
+  margin-bottom: 28px;
+  font-weight: 300;
+  font-size: 0.95rem;
+}
+
+.spotify-wrapper {
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.episodio-plataformas {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  color: rgba(242, 242, 242, 0.4);
+  font-weight: 600;
+}
+
+.episodio-plataformas a {
+  color: rgba(242, 242, 242, 0.7);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.episodio-plataformas a:hover {
+  color: var(--color-blanco);
+}
+
+/* =============================================
+   SOBRE EL PODCAST
+   ============================================= */
+#sobre {
+  padding: 0;
+}
+
+.sobre-bg {
+  background: linear-gradient(180deg, var(--color-espacio) 0%, #200808 50%, var(--color-rojo-oscuro) 100%);
+  padding: 90px 0;
+}
+
+.sobre-logo {
+  width: 180px;
+  filter: drop-shadow(0 0 40px rgba(226, 6, 19, 0.5));
+  animation: float 6s ease-in-out infinite;
+}
+
+.sobre-texto {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(242, 242, 242, 0.8);
+  margin-bottom: 36px;
+  font-weight: 300;
+}
+
+.pilares-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.pilar {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 24px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.pilar:hover {
+  border-color: var(--color-rojo);
+  transform: translateY(-3px);
+}
+
+.pilar-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--color-rojo);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: white;
+}
+
+.pilar h4 {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 1.15rem;
+  color: var(--color-blanco);
+  margin-bottom: 6px;
+}
+
+.pilar p {
+  font-size: 0.82rem;
+  color: rgba(242, 242, 242, 0.55);
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* =============================================
+   EPISODIOS RECIENTES
+   ============================================= */
+#episodios {
+  padding: 90px 0;
+  background: var(--color-espacio-medio);
+}
+
+.episodio-card {
+  background: var(--color-espacio);
+  border: 1px solid rgba(226, 6, 19, 0.25);
+  border-radius: 18px;
+  padding: 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.episodio-card:hover {
+  border-color: var(--color-rojo);
+  transform: translateY(-5px);
+}
+
+.episodio-card-soon {
+  opacity: 0.55;
+  border-style: dashed;
+}
+
+.episodio-card-num {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 2.8rem;
+  color: var(--color-rojo);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.episodio-card-title {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 1.25rem;
+  color: var(--color-blanco);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.episodio-card-desc {
+  color: rgba(242, 242, 242, 0.55);
+  font-size: 0.87rem;
+  line-height: 1.6;
+  flex: 1;
+  font-weight: 300;
+}
+
+.episodio-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.episodio-duracion {
+  font-size: 0.78rem;
+  color: rgba(242, 242, 242, 0.35);
+  font-weight: 600;
+}
+
+.btn-escuchar {
+  background: var(--color-rojo);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-escuchar:hover {
+  background: var(--color-rojo-oscuro);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* =============================================
+   NEWSLETTER
+   ============================================= */
+#newsletter {
+  padding: 0;
+}
+
+.newsletter-bg {
+  background: linear-gradient(135deg, var(--color-rojo-oscuro) 0%, #1a0505 50%, var(--color-espacio) 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(226,6,19,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.newsletter-icon {
+  font-size: 2.8rem;
+  color: var(--color-rojo);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.newsletter-desc {
+  color: rgba(242, 242, 242, 0.65);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 36px;
+  font-weight: 300;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+  background-color: var(--color-rojo);
+  color: var(--color-texto);
+  padding: 52px 0 0;
+  margin-top: auto;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-brand span {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 1.4rem;
+  color: var(--color-blanco);
+  letter-spacing: 1px;
+}
+
+.footer-logo {
+  height: 34px;
+}
+
+.footer-tagline {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+
+.footer-heading {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 1.05rem;
+  color: var(--color-blanco);
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.footer-links li,
+.footer-social li {
+  margin-bottom: 8px;
+}
+
+.footer-links a,
+.footer-social a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: var(--color-blanco);
+}
+
+.footer-bottom {
+  margin-top: 44px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 18px 0;
+}
+
+.footer-bottom p {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 991px) {
+  #hero {
+    min-height: auto;
+    padding: 70px 0;
   }
-  
-  body {
-    background-color: var(--color-primario);
-    color: var(--color-texto-general);
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+
+  .hero-subtitle {
+    max-width: 100%;
   }
-  
-  .navbar {
-    background-color: var(--color-secundario);
+}
+
+@media (max-width: 768px) {
+  #hero {
+    padding: 60px 0;
   }
-  
-  .navbar-brand,
-  .nav-link {
-    color: var(--color-texto-general) !important;
+
+  .hero-title {
+    font-size: 2.6rem;
   }
-  
-  .jumbotron {
-    background-color: var(--color-terciario);
-    padding: 2rem 1rem;
-    border-radius: 0.5rem;
-  }
-  
-  .jumbotron h1 {
-    color: var(--color-texto-general);
-  }
-  
-  /* Footer General */
-  footer {
-    background-color: var(--color-secundario);
-    color: #F2F2F2;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  /* Estilos para columnas del footer */
-  .footer-column h5 {
-    color: var(--color-texto-general);
-    margin-bottom: 10px;
-  }
-  
-  .footer-column a {
-    color: var(--color-texto-general);
-    text-decoration: none;
-  }
-  
-  .footer-column a:hover {
-    color: #D9756C;
-  }
-  
-  .footer-social-vertical li {
-    margin-bottom: 10px;
-  }
-  
-  /* Separador y margen para la declaración de derechos */
-  .footer-bottom {
-    margin-top: 20px;
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-  }
-  
-  /* Otros estilos */
-  .card {
-    background-color: var(--color-terciario);
-    border: none;
-    border-radius: 0.5rem;
-  }
-  
-  .card-title,
-  .card-text {
-    color: var(--color-texto-general);
-  }
-  
-  .btn-primary {
-    background-color: var(--color-secundario);
-    border-color: var(--color-secundario);
-  }
-  
-  .list-group-item {
-    background-color: var(--color-terciario);
-    border: none;
-    color: var(--color-texto-general);
-  }
-  
-  .list-group-item-action:hover {
-    background-color: var(--color-secundario);
-    color: var(--color-texto-general);
-  }
-  
-  /* Estilo para el logo en la navbar */
-  .logo-img {
-    height: 40px;
-    margin-right: 10px;
-    vertical-align: middle;
-  }
-  
-  /* HTML, body y #wrap para sticky footer */
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-  }
-  
-  #wrap {
-    min-height: 100%;
-    display: flex;
+
+  .hero-ctas {
     flex-direction: column;
   }
-  
-  /* Área principal de contenido */
-  #main {
-    flex: 1;
-    width: 100%;
-  }
-  
-  .main-image {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .main-image img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  
-  /* Formulario de Suscripción */
-  .subscription-form {
-    max-width: 600px;
-    margin: 20px auto;
+
+  .btn-hero-primary,
+  .btn-hero-secondary {
     text-align: center;
   }
-  
-  #mail {
-    color: white;
-    font-family: 'League Gothic', sans-serif;
-    font-size: 1.2rem;
-  }
-  
-  #portada {
-    width: 100%;
-  }
-  
-  /* Otros estilos opcionales */
-  .row-content {
-    display: flex;
-    flex-grow: 1;
-  }
-  
-  .block {
-    flex-basis: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
 
-  .block-2 {
-    display: flex;
-    align-content: center;
-  }
-  
-  .block-full-width {
-    background-color: #343a40;
-    color: white;
-    width: 100%;
-    padding: 40px 0;
-    text-align: center;
-  }
-  
-  h2,
-  p {
-    margin: 0;
+  .pilares-grid {
+    grid-template-columns: 1fr;
   }
 
-  
-  #footerresourses {
-font-size: small;
-text-decoration: underline;
-
-
+  .episodio-destacado {
+    padding: 28px 20px;
   }
-  
-.list-unstyled{ 
 
-    font-size: small;
-
+  .section-title {
+    font-size: 2rem;
   }
+}
